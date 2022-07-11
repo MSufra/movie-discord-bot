@@ -1,10 +1,12 @@
+# -*- coding: utf-8 -*-
+
 #dependencies
 import discord
 from discord.ext import commands, tasks
 import random
 import time
 
-from config import token
+token = input('insert token here')
 
 #set intents
 intents = discord.Intents.default()
