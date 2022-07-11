@@ -4,6 +4,8 @@ from discord.ext import commands, tasks
 import random
 import time
 
+from config import token
+
 #set intents
 intents = discord.Intents.default()
 bot = commands.Bot(command_prefix='?', intents=intents)
@@ -66,4 +68,4 @@ async def loop_quotes():
     await channel.send(choice)
 
 
-bot.run("OTg5NDEwMDMyNzgzMzUxODE4.GoW1Kb.hICgtiQWXf4NueBsKT8gHB5hm4jCxHEq6iUveU")
+bot.run(token)
