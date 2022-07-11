@@ -6,7 +6,12 @@ from discord.ext import commands, tasks
 import random
 import time
 
-token = input('insert token here')
+try:
+    from config import token
+except:
+    token = input('insert token here')
+    with open("./config.py",'w') as file:
+            file.write(f"token='{token}'")
 
 #set intents
 intents = discord.Intents.default()
